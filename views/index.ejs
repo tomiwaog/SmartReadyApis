@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link href="/assets/css/style.css" type ="text/css" rel="stylesheet" />
+        <title>EJS Template File</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Hello World from EJS Views!</h1>
+        <!-- <h2>QueryString value -->
+            <form action='/form' method='POST'>
+                Usernmame: <input name='username' type='text'><br />
+                Password: <input name='password' type='password'><br />
+                <input type='submit' value='Log in'>
+            </form>
+
+            <script>
+                $.ajax({
+                    type:'POST',
+                    data: JSON.stringify({
+                        username: 'tommiekiddy',
+                        password: 'Adetona555!s',
+                        lol:'funny stuff'
+                    }),
+                    url: '/api/'+"tommiekiddy"+'/validate',
+                    dataType:'json',
+                    contentType: 'application/json'
+                })
+            </script>
+    </body>
+</html>
